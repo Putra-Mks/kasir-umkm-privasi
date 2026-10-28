@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kebijakan Privasi Kasir UMKM</title>
+<meta name="description" content="Kebijakan privasi aplikasi Kasir UMKM untuk Android dan Windows serta layanan sinkronisasinya.">
+<style>
+:root { --bg:#ffffff; --fg:#1f2933; --muted:#52606d; --accent:#2563eb; --line:#e4e7eb; --code:#f1f5f9; }
+@media (prefers-color-scheme: dark) {
+  :root { --bg:#111827; --fg:#e5e7eb; --muted:#9ca3af; --accent:#93c5fd; --line:#374151; --code:#1f2937; }
+}
+* { box-sizing: border-box; }
+body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
+main { max-width:760px; margin:0 auto; padding:32px 16px 64px; }
+h1 { font-size:1.9rem; line-height:1.25; margin:0 0 4px; }
+h2 { font-size:1.2rem; margin:2rem 0 .5rem; padding-top:1rem; border-top:1px solid var(--line); }
+p, li { overflow-wrap:anywhere; }
+ul, ol { padding-left:1.3rem; }
+li { margin:.3rem 0; }
+a { color:var(--accent); }
+code { background:var(--code); padding:.1em .35em; border-radius:4px; font-size:.92em; }
+footer { margin-top:3rem; color:var(--muted); font-size:.9rem; }
+</style>
+</head>
+<body>
+<main>
+<h1>Kebijakan Privasi Kasir UMKM</h1>
+<p>Tanggal berlaku: 28 Oktober 2026</p>
+<p>Dokumen ini menjelaskan bagaimana aplikasi Kasir UMKM untuk Android dan Windows ("Aplikasi") serta layanan sinkronisasi dan back-office web Kasir UMKM ("Layanan Server") menangani data. Aplikasi dipakai pemilik toko dan stafnya untuk berjualan, mengelola stok, dan mencatat piutang pelanggan.</p>
+<h2>1. Pengelola</h2>
+<ul><li>Nama pengelola: Putra</li><li>Email kontak: <a href="mailto:itman9975@gmail.com">itman9975@gmail.com</a></li></ul>
+<h2>2. Dua cara pemakaian</h2>
+<ol><li><strong>Mode lokal (bawaan).</strong> Semua data hanya tersimpan di perangkat. Tidak ada data yang dikirim ke pengelola.</li><li><strong>Tersambung ke server (opsional).</strong> Pemilik toko dapat menyambungkan perangkat ke Layanan Server agar beberapa HP/komputer dan beberapa cabang memakai data yang sama, serta untuk membuka back-office web. Sejak tersambung, data toko yang tercantum di bagian 3 dikirim ke Layanan Server yang dikelola pengelola. Sambungan dapat diputus kapan saja oleh pemilik dari Pengaturan.</li></ol>
+<h2>3. Data yang disimpan</h2>
+<p>Data dimasukkan sendiri oleh pemilik toko dan stafnya:</p>
+<ul><li><strong>Toko dan cabang:</strong> nama, alamat, nomor telepon, pesan struk, tarif pajak.</li><li><strong>Pengguna (pemilik, supervisor, kasir):</strong> nama, peran, dan PIN dalam bentuk hash (PIN asli tidak disimpan). Untuk menyambungkan perangkat atau masuk ke back-office web, pemilik memakai email dan kata sandi (kata sandi disimpan sebagai hash di server).</li><li><strong>Produk dan stok:</strong> nama, SKU, barcode, kategori, harga modal dan jual, stok, riwayat perubahan stok, dan transfer stok antar-cabang.</li><li><strong>Transaksi:</strong> nomor struk, waktu, barang, diskon, pajak, metode pembayaran, kasir, pembatalan beserta alasannya, dan shift kas.</li><li><strong>Pelanggan piutang (BON):</strong> nama, nomor telepon (opsional), catatan, batas utang, transaksi BON, dan pembayaran cicilan.</li><li><strong>Log audit:</strong> catatan tindakan penting (misalnya pembatalan, perubahan harga, penyesuaian stok) beserta pelakunya.</li><li><strong>Data perangkat (hanya bila tersambung):</strong> ID perangkat acak yang dibuat Aplikasi, nama perangkat yang diisi pemilik, kode terminal, dan versi Aplikasi. Aplikasi tidak membaca IMEI, nomor telepon perangkat, kontak, lokasi, atau ID iklan.</li></ul>
+<h2>4. Penggunaan data</h2>
+<p>Data dipakai hanya untuk menjalankan fungsi Aplikasi: mencatat penjualan dan stok, menghitung kas shift dan piutang, menampilkan laporan, mencetak struk, menyinkronkan data antar-perangkat dan cabang toko yang sama, serta menjaga keamanan akun (misalnya pembatasan percobaan PIN). Data tidak dipakai untuk iklan, profil pemasaran, atau dijual.</p>
+<p>Aplikasi tidak memakai iklan, Firebase, layanan analitik, atau pelacak pihak ketiga.</p>
+<h2>5. Izin perangkat</h2>
+<ul><li><strong>Kamera:</strong> hanya untuk memindai barcode. Gambar diproses langsung di perangkat (ML Kit di perangkat), tidak disimpan dan tidak dikirim. Aplikasi tetap berjalan tanpa izin ini.</li><li><strong>Bluetooth / Perangkat sekitar:</strong> hanya untuk mencetak struk ke printer thermal Bluetooth yang sudah dipasangkan. Tidak dipakai untuk mencari lokasi.</li><li><strong>Internet:</strong> hanya untuk sinkronisasi dengan Layanan Server bila pemilik menyambungkannya.</li></ul>
+<h2>6. Berbagi data</h2>
+<p>Pengelola tidak menjual atau membagikan data kepada pihak ketiga. Data hanya dapat dilihat oleh pengguna toko itu sendiri sesuai perannya (misalnya kasir tidak melihat harga modal), dan setiap toko terpisah dari toko lain di Layanan Server.</p>
+<p>Layanan Server memakai penyedia infrastruktur untuk beroperasi, yaitu jaringan Cloudflare untuk akses aman dari internet dan penyimpanan cloud untuk salinan cadangan. Salinan cadangan dienkripsi sebelum dikirim sehingga penyedia penyimpanan tidak dapat membaca isinya.</p>
+<p>Struk yang dibagikan pengguna lewat menu Bagikan dikirim ke aplikasi yang dipilih pengguna sendiri dan mengikuti kebijakan aplikasi tersebut.</p>
+<h2>7. Keamanan</h2>
+<ul><li>Komunikasi dengan Layanan Server memakai HTTPS (terenkripsi).</li><li>PIN dan kata sandi disimpan sebagai hash; token sinkronisasi disimpan terenkripsi di perangkat.</li><li>Data toko dikecualikan dari cadangan otomatis Android/Google. Cadangan dibuat lewat fitur Cadangan di Aplikasi dalam berkas <code>.kbak</code> terenkripsi dengan kata sandi pilihan pemilik.</li><li>Back-office web mendukung kode autentikator (verifikasi dua langkah).</li></ul>
+<p>Tidak ada sistem yang sepenuhnya aman. Pemilik toko sebaiknya memakai kunci layar, PIN yang tidak mudah ditebak, dan membatasi siapa yang memegang perangkat kasir.</p>
+<h2>8. Penyimpanan dan penghapusan data</h2>
+<ul><li><strong>Di perangkat:</strong> data tersimpan sampai diubah melalui Aplikasi atau Aplikasi dihapus. Menghapus Aplikasi menghapus data lokalnya.</li><li><strong>Di Layanan Server:</strong> data disimpan selama toko memakai Layanan. Pemilik dapat menonaktifkan pengguna dan produk dari Aplikasi atau back-office. Untuk menghapus seluruh data toko (termasuk akun pemilik dan staf) dari Layanan Server, pemilik mengirim permintaan dari email akun pemilik ke <a href="mailto:itman9975@gmail.com">itman9975@gmail.com</a> dengan judul "Hapus data toko". Data dihapus paling lambat 30 hari setelah permintaan dikonfirmasi; salinan cadangan terenkripsi ikut terhapus sesuai masa simpan cadangan (paling lama 8 minggu). Sebelum dihapus, pemilik dapat meminta ekspor data.</li></ul>
+<h2>9. Anak-anak</h2>
+<p>Aplikasi ditujukan untuk kegiatan usaha, bukan untuk anak-anak, dan tidak dengan sengaja mengumpulkan data anak.</p>
+<h2>10. Perubahan kebijakan</h2>
+<p>Kebijakan ini diperbarui bila fitur atau cara pengolahan data berubah. Versi terbaru selalu tersedia di halaman tempat kebijakan ini dipublikasikan, dengan tanggal berlaku di bagian atas.</p>
+<h2>11. Kontak</h2>
+<p>Pertanyaan dan permintaan terkait data: <a href="mailto:itman9975@gmail.com">itman9975@gmail.com</a></p>
+<footer>Kasir UMKM · halaman ini juga berlaku sebagai petunjuk permintaan penghapusan data (bagian 8).</footer>
+</main>
+</body>
+</html>
